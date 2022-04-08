@@ -17,6 +17,13 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: "./index.html",
+        title: "jate",
+      }),
+      new InjectManifest({
+        swSrc: "./src-sw.js",
+        swDest: "src-sw.js",
+      }),
+      new WebpackPwaManifest({
         name: "My Progressive Web App",
         short_name: "MyPWA",
         description: "My awesome Progressive Web App!",
@@ -24,18 +31,18 @@ module.exports = () => {
         crossorigin: "use-credentials",
         icons: [
           {
-            src: path.resolve("src/assets/icon.png"),
+            src: path.resolve("./src/images/logo.png"),
             sizes: [96, 128, 192, 256, 384, 512], // multiple sizes
           },
           {
-            src: path.resolve("src/assets/large-icon.png"),
+            src: path.resolve("./src/images/logo.png"),
             size: "1024x1024", // you can also use the specifications pattern
           },
-          {
-            src: path.resolve("src/assets/maskable-icon.png"),
-            size: "1024x1024",
-            purpose: "maskable",
-          },
+          // {
+          //   src: path.resolve("src/assets/maskable-icon.png"),
+          //   size: "1024x1024",
+          //   purpose: "maskable",
+          // },
         ],
       }),
     ],
