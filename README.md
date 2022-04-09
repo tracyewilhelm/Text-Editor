@@ -76,7 +76,3 @@ You are required to submit the following for review:
 
 - The URL of the GitHub repository, with a unique name and a README describing the project
   https://github.com/tracyewilhelm/Text-Editor
-
----
-
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
